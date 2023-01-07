@@ -24,6 +24,9 @@ async function handleRequest(request: any) {
       status: 400,
       headers: {
         "content-type": "text/plain;charset=UTF-8",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
       },
     });
   }
@@ -37,6 +40,10 @@ async function handleRequest(request: any) {
   return new Response(JSON.stringify(reponse), {
     headers: {
       "content-type": "application/json;charset=UTF-8",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",
+      "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+      "Cache-Control": "max-age=60",
     },
   });
 }
