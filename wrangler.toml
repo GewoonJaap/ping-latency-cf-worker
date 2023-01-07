@@ -1,0 +1,8 @@
+name = "ip-port-ping"
+main = "src/index.ts"
+compatibility_date = "2023-01-07"
+usage_model = "bundled"
+env = { }
+
+[triggers]
+crons = [ ]
